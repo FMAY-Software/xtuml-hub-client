@@ -1,0 +1,26 @@
+{
+  "name": "xtuml-hub-client",
+  "about": "A client for the xtuml central HUB for modeling collaboration.",
+  "description": "A place to share models and implementations. ",
+  "email": "travis.london@gmail.com",
+  "repository_name": "xtuml-hub-client",
+  "home": "https://github.com/FMAY-Software/xtuml-hub-client",
+  "deliverables": [
+    {
+      "target": "None",
+      "url": "None"
+    }
+  ],
+  "demonstration": {
+    "url": ""
+  },
+  "owner": {
+    "first_name": "FMAY-Incubator",
+    "last_name": "",
+    "email": "travis.london@fmay.net",
+    "phone": "5203730727"
+  },
+  "clients": [
+    "travis.london@gmail.com"
+  ]
+}
