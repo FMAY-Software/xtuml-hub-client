@@ -1,0 +1,32 @@
+{
+  "name": "xtuml-hub-client",
+  "version": "1.0.0",
+  "description": "A client for the central HUB of collaborative xtUML modeling.",
+  "repository": "https://github.com/FMAY-Software/xtuml-hub-client",
+  "author": "FMAY Software",
+  "license": "MIT",
+  "private": true,
+  "scripts": {
+    "copy-assets": "cp -r public/assets dist/",
+    "prestart": "yarn copy-assets",
+    "prebuild": "yarn copy-assets",
+    "start": "parcel public/index.html",
+    "build": "parcel build public/index.html"
+  },
+  "devDependencies": {
+    "@parcel/optimizer-data-url": "2.10.3",
+    "@parcel/transformer-inline-string": "2.10.3",
+    "@types/react": "^18.2.45",
+    "@types/react-dom": "^18.2.18",
+    "parcel": "^2.10.3",
+    "process": "^0.11.10",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "@ant-design/colors": "^7.0.0",
+    "@ant-design/icons": "^5.2.6",
+    "antd": "^5.12.5",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  }
+}

@@ -1,7 +1,7 @@
-# xtuml-hub-client
-A place to share models and implementations. 
+# xtuml-hub
+A place to share models, realizations and more.
 
 
-<a id="Project Information"></a>[Project Information](https://fmay-software.github.io/xtuml-hub-client/)
+<a id="Project Information"></a>[Project Information](https://fmay-software.github.io/xtuml-hub/)
   
   

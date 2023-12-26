@@ -1,10 +1,10 @@
 {
-  "name": "xtuml-hub-client",
-  "about": "A client for the xtuml central HUB for modeling collaboration.",
-  "description": "A place to share models and implementations. ",
+  "name": "xtuml-hub",
+  "about": "A central HUB for collaborative modeling.",
+  "description": "A place to share models, realizations and more.",
   "email": "travis.london@gmail.com",
-  "repository_name": "xtuml-hub-client",
-  "home": "https://github.com/FMAY-Software/xtuml-hub-client",
+  "repository_name": "xtuml-hub",
+  "home": "https://github.com/FMAY-Software/xtuml-hub",
   "deliverables": [
     {
       "target": "None",
