@@ -13,7 +13,17 @@ html, body, #root {
     height: 100%;
 }
 
+.xhub-vscroll {
+    overflow-y: auto;
+}
+
 /* ant design override */
 .ant-card .ant-card-head {
     border-bottom: 1px solid #d9f7be;
+}
+/* not sure why this is necessary, but icons do not center well otherwise */
+.ant-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
