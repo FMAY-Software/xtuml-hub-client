@@ -5,7 +5,7 @@ import { RcFile } from "antd/lib/upload/interface";
 import { FileArtifact } from "../model/file_artifact";
 import { FileType } from "../model/file_type";
 import { IoAdd } from "react-icons/io5";
-import FileTable, { FileTableRow } from "./FileTable";
+import FileTable from "./FileTable";
 import { get_signed_urls } from "../../api/get_signed_urls";
 import { Artifact } from "../model/artifact";
 
@@ -190,10 +190,11 @@ const ArtifactUploads: React.FC<ArtifactUploadsProps> = ({
             name: file.file.name,
             size: file.file.size,
             id: file.id,
+            url: "",
           }))}
           deleteFunction={(
             text: string,
-            record: FileTableRow,
+            record: FileArtifact,
             index: number
           ) => (
             <Space size="middle">

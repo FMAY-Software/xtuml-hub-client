@@ -1,1 +1,1 @@
-export type FileType = "C" | "C++" | "Java" | "Pure" | "OAL" | "MASL";
+export type FileType = "C" | "C++" | "Java" | "Pure" | "Oal" | "MASL";

@@ -22,11 +22,11 @@ import { Artifact } from "../model/artifact";
 import { useArtifactDispatch } from "../../store/nodes/artifacts/artifactHooks";
 import { FileArtifact } from "../model/file_artifact";
 import { updateStagingArtifact } from "../../store/nodes/artifacts/stagingArtifactSlice";
-import FileTable, { FileTableRow } from "./FileTable";
+import FileTable from "./FileTable";
 import Usage from "./Usage";
 import { get_signed_urls } from "../../api/get_signed_urls";
 import JSZip from "jszip";
-import { saveAs } from "file-saver";
+import SourceViewer from "../../viewer/SourceViewer";
 
 const { TextArea } = Input;
 
@@ -51,6 +51,9 @@ const ArtifactDetails = (props: ArtifactDetailsProperties) => {
     artifact.dependencies ?? ""
   );
   const dispatch = useArtifactDispatch();
+  const [sourceToView, setSourceToView] = useState<FileArtifact | undefined>(
+    undefined
+  );
 
   const handleFileUpload = (files: FileArtifact[]) => {
     const existingFiles = artifact.files ? artifact.files : [];
@@ -288,7 +291,7 @@ const ArtifactDetails = (props: ArtifactDetailsProperties) => {
                 readonly={readonly}
                 deleteFunction={(
                   text: string,
-                  record: FileTableRow,
+                  record: FileArtifact,
                   index: number
                 ) => (
                   <Button
@@ -299,6 +302,7 @@ const ArtifactDetails = (props: ArtifactDetailsProperties) => {
                     Delete
                   </Button>
                 )}
+                openSourceViewer={(file: FileArtifact) => setSourceToView(file)}
               />
             </Descriptions.Item>
             {!readonly ? (
@@ -341,6 +345,11 @@ const ArtifactDetails = (props: ArtifactDetailsProperties) => {
         onComplete={(files: FileArtifact[]) => handleFileUpload(files)}
         onCancel={() => setUploading(false)}
         readonly={readonly}
+      />
+      <SourceViewer
+        file={sourceToView!}
+        handleClose={() => setSourceToView(undefined)}
+        show={sourceToView !== undefined}
       />
     </Card>
   );
