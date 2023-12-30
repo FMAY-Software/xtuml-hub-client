@@ -262,7 +262,7 @@ const ArtifactDetails = (props: ArtifactDetailsProperties) => {
                     `${
                       artifact.dependencies && artifact.dependencies !== ""
                         ? artifact.dependencies
-                        : "No dependencies"
+                        : "No External Dependencies"
                     }`
                   )}
                 </Flex>

@@ -7,8 +7,8 @@ export interface Artifact {
   description: string;
   types: string[];
   files: FileArtifact[];
-  dependencies?: string;
-  usage?: string;
+  dependencies: string;
+  usage: string;
   last_modified: string;
   lastName?: string;
 }

@@ -26,6 +26,8 @@ const NewArtifact: React.FC<NewArtifactProperties> = ({
         owner: user[0]!.email!, // TODO: replace with logged in user
         name: values.name,
         description: values.description,
+        dependencies: "",
+        usage: "",
         last_modified: new Date().toISOString(),
         types: [],
         files: [],
